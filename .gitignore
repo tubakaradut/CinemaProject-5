@@ -1,0 +1,363 @@
+# # Visual Studio geçici dosyalarını yoksay, sonuçları oluştur ve
+# # popüler Visual Studio eklentileri tarafından oluşturulan dosya.
+# #
+# # https://github.com/github/gitignore/blob/master/VisualStudio.gitignore adresinden en son bilgileri alın
+
+# Kullanıcıya özel dosyalar
+* .rsuser
+* .suo
+* .kullanıcı
+* .userosscache
+* .sln.docstates
+
+# Kullanıcıya özel dosyalar (MonoDevelop/Xamarin Studio)
+* .userprefs
+
+# Mono otomatik olarak oluşturulan dosyalar
+mono_crash. *
+
+# Derleme sonuçları
+[ Dd ] ebug /
+[ Dd ] ebugGenel /
+[ Rr ] rahatla /
+[ Rr ] rahatlar /
+x64 /
+x86 /
+[ Ww ][ Ii ][ Nn ] 32 /
+[ Aa ][ Rr ][ Mm ]/
+[ Aa ][ Rr ][ Mm ] 64 /
+bld /
+[ Bb ] içinde /
+[ Oo ] bj /
+[ Oo ] ut /
+[ Ll ] og /
+[ Ll ] ogs /
+
+# Visual Studio 2015/2017 önbellek/seçenekler dizini
+.vs /
+# wwwroot'ta projenin statik dosyalarını oluşturan görevleriniz varsa yorumdan vazgeçin
+# wwwroot/
+
+# Visual Studio 2017 otomatik olarak oluşturulan dosyalar
+Oluşturulan \ Dosyalar /
+
+# MSTest test sonuçları
+[ Tt ] est [ Rr ] sonuç * /
+[ Bb ] uild [ Ll ] og. *
+
+# NUbirim
+* .VisualState.xml
+TestResult.xml
+nunit- * .xml
+
+# Bir ATL Projesinin Sonuçlarını Oluşturma
+[ Dd ] ebugPS /
+[ Rr ] eleasePS /
+dlldata.c
+
+# Karşılaştırma Sonuçları
+BenchmarkDotNet.Artifacts /
+
+# .NET Çekirdeği
+proje.lock.json
+proje.fragment.lock.json
+eserler /
+
+# ASP.NET İskele
+İskeleBeniOku.txt
+
+# Stil Polisi
+StyleCopReport.xml
+
+# Visual Studio tarafından oluşturulan dosyalar
+* _i.c
+* _p.c
+* _h.h
+* .ilk
+* .meta
+* .obj
+* .iobj
+* .pch
+* .pdb
+* .ipdb
+* .pgc
+* .pgd
+* .rsp
+* .sbr
+* .tlb
+* .tli
+* .tlh
+* .tmp
+* .tmp_proj
+* _wpftmp.csproj
+* .log
+* .vspscc
+* .vssscc
+.inşa eder
+* .pidb
+* .svclog
+* .scc
+
+# Chutzpah Test dosyaları
+_Chutzpah *
+
+# Visual C++ önbellek dosyaları
+ipch /
+* .aps
+* .ncb
+* .opendb
+* .opensdf
+* .sdf
+* .cachefile
+* .VC.db
+* .VC.VC.opendb
+
+# Visual Studio profil oluşturucu
+* .pses
+* .vsp
+* .vspx
+* .sap
+
+# Visual Studio İzleme Dosyaları
+* .e2e
+
+# TFS 2012 Yerel Çalışma Alanı
+$tf /
+
+# Kılavuz Otomasyon Araç Seti
+* .gpState
+
+# ReSharper bir .NET kodlama eklentisidir
+_ReSharper * /
+* . [ Rr ] e [ Ss ] arpçı
+* .DotSettings.user
+
+# TeamCity bir yapı eklentisidir
+_TeamŞehir *
+
+# DotCover bir Kod Kapsama Aracıdır
+* .dotKapak
+
+# AxoCover bir Kod Kapsama Aracıdır
+.axoCover / *
+! .axoCover / settings.json
+
+# Coverlet ücretsiz, platformlar arası bir Kod Kapsamı Aracıdır
+kapsam * .json
+kapsam * .xml
+kapsam * .info
+
+# Visual Studio kod kapsamı sonuçları
+* .kapsama
+* .coveragexml
+
+# NCrunch
+_NCrunch_ *
+. * crunch * .local.xml
+nCrunchTemp_ *
+
+# MightyMoose
+* .mm. *
+Otomatik Test.Net /
+
+# Web tezgahı (sass)
+.sass-önbellek /
+
+# Installshield çıktı klasörü
+[ Ee ] xpress /
+
+# DocProject bir dokümantasyon oluşturucu eklentisidir
+DocProject / buildhelp /
+DocProject / Yardım / * .HxT
+DocProject / Yardım / * .HxC
+DocProject / Yardım / * .hhc
+DocProject / Yardım / * .hhk
+DocProject / Yardım / * .hhp
+DocProject / Yardım / Html2
+DocProject / Yardım / html
+
+# Bir Kez Tıklama dizini
+yayınlamak /
+
+# Web Çıktısını Yayınla
+* . [ Pp ] ublish.xml
+* .azurePubxml
+# Not: Web dağıtım ayarlarınızı kontrol etmek istiyorsanız bir sonraki satırı yorumlayın,
+# ancak veritabanı bağlantı dizeleri (olası parolalarla) şifrelenmemiş olacak
+* .pubxml
+* .yayınproj
+
+# Microsoft Azure Web App yayınlama ayarları. İsterseniz bir sonraki satırı yorumlayın
+# Azure Web Uygulaması yayınlama ayarlarınızı kontrol edin, ancak içerdiği hassas bilgiler
+# bu komut dosyalarında şifrelenmemiş olacak
+Yayınlama Komut Dosyaları /
+
+# NuGet Paketleri
+* .nupkg
+# NuGet Sembol Paketleri
+* .snupkg
+# Paket Geri Yükleme nedeniyle paketler klasörü göz ardı edilebilir
+** /[ Pp ] hesaplar / *
+# MSBuild hedefi olarak kullanılan build/ hariç.
+! ** /[ Pp ] ackages / build /
+# Gerekirse yorum yapmayın, ancak genellikle gerektiğinde yeniden oluşturulur
+# !**/[Pp]ackages/repositories.config
+# NuGet v3'ün project.json dosyaları daha fazla göz ardı edilebilir dosya üretir
+* .nuget.props
+* .nuget.hedefler
+
+# Microsoft Azure Yapı Çıktısı
+csx /
+* .build.csdef
+
+# Microsoft Azure Emülatörü
+ecf /
+rcf /
+
+# Windows Mağazası uygulama paketi dizinleri ve dosyaları
+Uygulama Paketleri /
+PaketYapıları /
+Package.StoreAssociation.xml
+_pkginfo.txt
+* .appx
+* .appxbundle
+* .appxupload
+
+# Visual Studio önbellek dosyaları
+.cache ile biten # dosya yoksayılabilir
+* . [ Cc ] ağrı
+# ancak .cache ile biten dizinleri takip edin
+! ?* . [ Cc ] ağrı /
+
+# Diğerleri
+Müşteri Kutusu /
+~$ *
+* ~
+* .dbmdl
+* .dbproj.schemaview
+* .jfm
+* .pfx
+* .yayın ayarları
+orleans.codegen.cs
+
+# Kesin ad dosyalarının dahil edilmesi bir güvenlik riski oluşturabilir
+# (https://github.com/github/gitignore/pull/2483#issue-259490424)
+# *.snk
+
+# Birden fazla iş akışı olduğundan, bower_components'ı yoksaymak için sonraki satırın açıklamasını kaldırın
+# (https://github.com/github/gitignore/pull/1529#issuecomment-104372622)
+# bower_components/
+
+# RIA/Silverlight projeleri
+Oluşturulan_Kod /
+
+# Eski bir proje dosyasını dönüştürerek dosyaları yedekleyin ve raporlayın
+# daha yeni bir Visual Studio sürümüne. Yedek dosyalar gerekli değildir,
+# çünkü bizde git var ;-)
+_UpgradeReport_Files /
+Yedekleme * /
+Yükseltme Günlüğü * .XML
+Yükseltme Günlüğü * .htm
+ServisFabricYedekleme /
+* .rptproj.bak
+
+# SQL Server dosyaları
+* .mdf
+* .ldf
+* .ndf
+
+# İş Zekası projeleri
+* .rdl.veri
+* .bim.layout
+* .bim_ * .ayarlar
+* .rptproj.rsuser
+* - [ Bb ] ackup.rdl
+* - [ Bb ] geri yükleme  ( [ 0-9 ] ).rdl
+* - [ Bb ] geri alma  ( [ 0-9 ][ 0-9 ] ).rdl
+
+# Microsoft Sahtekarlığı
+Sahte Montajlar /
+
+# GhostDoc eklenti ayar dosyası
+* .GhostDoc.xml
+
+# Visual Studio için Node.js Araçları
+.ntvs_analysis.dat
+düğüm_modülleri /
+
+# Visual Studio 6 derleme günlüğü
+* .plg
+
+# Visual Studio 6 çalışma alanı seçenekleri dosyası
+* .opt
+
+# Visual Studio 6 otomatik oluşturulan çalışma alanı dosyası (hangi dosyaların açık olduğunu vb. içerir)
+* .vbw
+
+# Visual Studio LightSwitch derleme çıktısı
+** / * .HTMLClient / GeneratedArtifacts
+** / * .DesktopClient / Oluşturulan Yapılar
+** / * .DesktopClient / ModelManifest.xml
+** / * .Server / GeneratedArtifacts
+** / * .Sunucu / ModelManifest.xml
+_Pvt_Uzantılar
+
+# Paket bağımlılık yöneticisi
+.paket / paket.exe
+paket dosyaları /
+
+# SAHTE - F# Yap
+.sahte /
+
+# CodeRush kişisel ayarları
+.cr / kişisel
+
+# Visual Studio için Python Araçları (PTVS)
+__pycache__ /
+* .pyc
+
+# Kek - Kullanıyorsanız yorum yapmayın
+# araçlar/**
+# !tools/packages.config
+
+# Sekmeler Stüdyosu
+* .tss
+
+# Telerik'in JustMock yapılandırma dosyası
+* .jmconfig
+
+# BizTalk derleme çıktısı
+* .btp.cs
+* .btm.cs
+* .odx.cs
+* .xsd.cs
+
+# OpenCover UI analiz sonuçları
+Kapağı Aç /
+
+# Azure Stream Analytics yerel çalıştırma çıktısı
+ASAYerelÇalıştır /
+
+# MSBuild İkili ve Yapılandırılmış Günlük
+* .binlog
+
+# NVidia Nsight GPU hata ayıklayıcı yapılandırma dosyası
+* .nvuser
+
+# Mfractors (Xamarin üretkenlik aracı) çalışma klasörü
+.mfractor /
+
+# Visual Studio için Yerel Geçmiş
+.localhistory /
+
+# BeatPulse sağlık kontrolü geçici veritabanı
+sağlık kontrolleridb
+
+# Visual Studio 2017'de Paket Referansı Dönüştürme aracı için yedekleme klasörü
+MigrationYedekleme /
+
+# Ionide (çapraz platform F# VS Code araçları) çalışma klasörü
+.iyonid /
+
+# Fody - otomatik oluşturulan XML şeması
+FodyWeavers.xsd
