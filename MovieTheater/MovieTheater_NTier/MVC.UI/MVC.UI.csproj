@@ -1750,6 +1750,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\CategoryController.cs" />
+    <Compile Include="Areas\Admin\Controllers\MovieController.cs" />
+    <Compile Include="Areas\Admin\Controllers\SaloonController.cs" />
+    <Compile Include="Areas\Admin\Controllers\SessionController.cs" />
+    <Compile Include="Areas\Admin\Views\WeekController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -1758,6 +1764,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
+<<<<<<< HEAD
     <Content Include="Content\assets\advanced-datatable\component.json" />
     <Content Include="Content\assets\advanced-datatable\docs\media\license\Syntax Highlighter" />
     <Content Include="Content\assets\advanced-datatable\examples\examples_support\syntax\license\Syntax Highlighter" />
@@ -1911,6 +1918,9 @@
     <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
+=======
+    <Content Include="Areas\Admin\Views\web.config" />
+>>>>>>> 8013fb380492e2b5cf938d0e3e9fdf9131d78b4c
     <None Include="packages.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
@@ -1924,7 +1934,17 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+<<<<<<< HEAD
     <Folder Include="Content\assets\jquery-file-upload\server\php\files\thumbnail\" />
+=======
+    <Folder Include="Areas\Admin\Data\" />
+    <Folder Include="Areas\Admin\Views\Category\" />
+    <Folder Include="Areas\Admin\Views\Movie\" />
+    <Folder Include="Areas\Admin\Views\Saloon\" />
+    <Folder Include="Areas\Admin\Views\Session\" />
+    <Folder Include="Areas\Admin\Views\Shared\" />
+    <Folder Include="Areas\Admin\Views\Week\" />
+>>>>>>> 8013fb380492e2b5cf938d0e3e9fdf9131d78b4c
     <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>

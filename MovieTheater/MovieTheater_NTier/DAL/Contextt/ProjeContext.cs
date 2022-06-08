@@ -13,7 +13,7 @@ namespace DAL.Contextt
     {
         public ProjeContext()
         {
-            /*Database.Connection.ConnectionString = "server=DESKTOP-PAHPBA7;Database=MovieDB;uid=sa;pwd=123456";*/ Database.Connection.ConnectionString = "server=REDHACK;Database=MovieDB;integrated security=true";
+            Database.Connection.ConnectionString = "server=DESKTOP-PAHPBA7;Database=MovieDB;uid=sa;pwd=123456";/* Database.Connection.ConnectionString = "server=REDHACK;Database=MovieDB;integrated security=true";*/
         }
 
         public DbSet<Movie> Movies { get; set; }
@@ -24,6 +24,7 @@ namespace DAL.Contextt
         public DbSet<Theater> Theaters { get; set; }
         public DbSet<Week> Weeks { get; set; }
         public DbSet<MovieCategory> MovieCategories { get; set; }
+        public object Theater { get; internal set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
