@@ -154,58 +154,40 @@
         @*<p>
                 <button class="btn btn-round btn-danger" type="button"><i class="icon-shopping-cart"></i> Bilet Al</button>
             </p>*@
-        <a href="#" class="btn btn-round btn-danger buyTicket">Bilet Al</a>
-        @*@Html.ActionLink("Bilet Al", "AddToCart", "Home", new {  }, new { @class = "btn btn-round btn-danger buyTicket" })*@
+        <a href="#" id="buyTicket" class="btn btn-round btn-danger">Bilet Al</a>
     </div>
 </div>
 @section Script{
     <script>
 
-    $("#buyTicket").click(function (e) {
-        var cartItem = new Object();
+        $("#buyTicket").click(function (e) {
+            e.preventDefault();
 
-        cartItem.MovieName = "@Model.MovieName";
-        cartItem.Quantity = $("#quantity").val();
-        cartItem.Price = 50;
-        cartItem.MovieDate = $("#sessionDate.active").val();
-        cartItem.MovieTime= $("#sessionTime.active").val();
-        var url = '@Url.Action("AddToCart", "Home")';
-        console.log(url);
-        @*if (cartItem != null) {
+            var cartItem = {
+                Id:@Model.Id,
+                Quantity : $("#quantity")[0].value,
+                MovieDate : $("#sessionDate.active")[0].textContent,
+                MovieTime: $("#sessionTime.active")[0].textContent
+            }
+
+            var url = '@Url.Action("AddToCart", "Home")';
+        if (cartItem != null) {
             $.ajax({
                 type: "POST",
-                url: "@Url.Action("AddToCart", "Home")",
+                url:url,
                 data: JSON.stringify(cartItem),
                 contentType: "application/json; charset=utf-8",
                 dataType: "json",
                 success: function (response) {
-                    //if (response != null) {
-                    //    alert("Name : " + response.Name + ", Designation : " + response.Designation + ", Location :" + response.Location);
-                    //} else {
-                    //    alert("Something went wrong");
-                    //}
-                },
-                failure: function (response) {
-                    alert(response.responseText);
-                },
-                error: function (response) {
-                    alert(response.responseText);
+                    if (response != null) {
+                        window.location.href = '@Url.Action("MyCart", "Home")';
+                    } else {
+                        alert("Hatalı İşlem");
+                    }
                 }
             });
-        }*@
-
-        //var url = $(this).attr("href");
-        //$.post(url, cartItem);
+        }
     });
     </script>
-    }
-
-@*$.ajax({
-    method: 'Post',
-    url: 'https://localhost:44376/api/employees/PostAddEmployee',
-    data: employee,
-    success: function (employees) {
-        BringData(employees);
-    }*@
-
+}
 

@@ -138,36 +138,39 @@ namespace MVC.UI.Controllers
         {
             try
             {
-                //Movie movie = movieService.GetById(id);
-                //Cart cart = null;
+                Movie movie = movieService.GetById(cartItem.Id);
+                Cart cart = null;
 
-                //if (Session["kcart"] == null)
-                //{
-                //    cart = new Cart();
-                //}
-                //else
-                //{
-                //    cart = Session["kcart"] as Cart;
-                //}
+                if (Session["kcart"] == null)
+                {
+                    cart = new Cart();
+                }
+                else
+                {
+                    cart = Session["kcart"] as Cart;
+                }
 
-                //CartItem ci = new CartItem();
-                //ci.Id = movie.Id;
-                //ci.MovieName = movie.MovieName;
-                //ci.Price = 50;
+                CartItem ci = new CartItem();
+                ci.Id = movie.Id;
+                ci.MovieName = movie.MovieName;
+                ci.Price = 50;
+                ci.Quantity = cartItem.Quantity;
+                ci.MovieDate = cartItem.MovieDate;
+                ci.MovieTime = cartItem.MovieTime;
 
-                //cart.AddItem(ci);
-                
-                //Session["kcart"] = cart;
+                cart.AddItem(ci);
 
-                return Json(cartItem,JsonRequestBehavior.AllowGet);
+                Session["kcart"] = cart;
+
+                return Json(movie.Id, JsonRequestBehavior.AllowGet);
 
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                //TempData["error"] = $"{id} karşılık gelen ürün bulunamadı";
+                return Json(null, JsonRequestBehavior.AllowGet);
             }
 
-            return Json(cartItem, JsonRequestBehavior.AllowGet);
+            return Json(null, JsonRequestBehavior.AllowGet);
         }
 
         //benim sepetim
@@ -205,7 +208,7 @@ namespace MVC.UI.Controllers
            
             if (user == null)
             {
-                return RedirectToAction("Index", "Login");
+                return RedirectToAction("Login");
             }
 
             if (cart != null)

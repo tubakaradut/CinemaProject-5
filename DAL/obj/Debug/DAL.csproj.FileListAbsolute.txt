@@ -115,3 +115,18 @@ C:\Users\Tuba\Desktop\sinema ödev\MovieTheater\MovieTheater_NTier\DAL\obj\Debug
 C:\Users\Tuba\Desktop\sinema ödev\MovieTheater\MovieTheater_NTier\DAL\obj\Debug\DAL.csproj.CopyComplete
 C:\Users\Tuba\Desktop\sinema ödev\MovieTheater\MovieTheater_NTier\DAL\obj\Debug\DAL.dll
 C:\Users\Tuba\Desktop\sinema ödev\MovieTheater\MovieTheater_NTier\DAL\obj\Debug\DAL.pdb
+C:\Users\Tuba\Desktop\SinemaProjesi\CinemaProject-5\DAL\bin\Debug\DAL.dll.config
+C:\Users\Tuba\Desktop\SinemaProjesi\CinemaProject-5\DAL\bin\Debug\DAL.dll
+C:\Users\Tuba\Desktop\SinemaProjesi\CinemaProject-5\DAL\bin\Debug\DAL.pdb
+C:\Users\Tuba\Desktop\SinemaProjesi\CinemaProject-5\DAL\bin\Debug\Core.dll
+C:\Users\Tuba\Desktop\SinemaProjesi\CinemaProject-5\DAL\bin\Debug\EntityFramework.dll
+C:\Users\Tuba\Desktop\SinemaProjesi\CinemaProject-5\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Tuba\Desktop\SinemaProjesi\CinemaProject-5\DAL\bin\Debug\Core.pdb
+C:\Users\Tuba\Desktop\SinemaProjesi\CinemaProject-5\DAL\bin\Debug\Core.dll.config
+C:\Users\Tuba\Desktop\SinemaProjesi\CinemaProject-5\DAL\bin\Debug\EntityFramework.xml
+C:\Users\Tuba\Desktop\SinemaProjesi\CinemaProject-5\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Tuba\Desktop\SinemaProjesi\CinemaProject-5\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\Users\Tuba\Desktop\SinemaProjesi\CinemaProject-5\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\Tuba\Desktop\SinemaProjesi\CinemaProject-5\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\Tuba\Desktop\SinemaProjesi\CinemaProject-5\DAL\obj\Debug\DAL.dll
+C:\Users\Tuba\Desktop\SinemaProjesi\CinemaProject-5\DAL\obj\Debug\DAL.pdb
