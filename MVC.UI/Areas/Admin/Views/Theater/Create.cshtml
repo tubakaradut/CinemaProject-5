@@ -1,0 +1,62 @@
+﻿@model DAL.Entities.Theater
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="col-lg-6">
+    <section class="panel">
+        <header class="panel-heading">
+            Gösterim Ekle
+        </header>
+        <div class="panel-body">
+            <form role="form" method="post">
+                <div class="form-group">
+                    <label>Film Adı</label>
+                    <select name="MovieId" class="form-control m-bot15">
+                        @foreach (var movie in (List<DAL.Entities.Movie
+              >)ViewBag.Movie)
+                        {
+                            <option value="@movie.Id">@movie.MovieName</option>
+                        }
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Salon Adı</label>
+                    <select name="SaloonId" class="form-control m-bot15">
+                        @foreach (var saloon in (List<DAL.Entities.Saloon
+              >)ViewBag.Saloon)
+                        {
+                            <option value="@saloon.Id">@saloon.SaloonName</option>
+                        }
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Hafta Adı</label>
+                    <select name="WeekId" class="form-control m-bot15">
+                        @foreach (var week in (List<DAL.Entities.Week
+              >)ViewBag.Week)
+                        {
+                            <option value="@week.Id">@week.WeekName</option>
+                        }
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Seans Adı</label>
+                    <select name="SessionId" class="form-control m-bot15">
+                        @foreach (var session in (List<DAL.Entities.Session
+              >)ViewBag.Session)
+                        {
+                            <option value="@session.Id">@session.Duration</option>
+                        }
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-info">Kaydet</button>
+            </form>
+        </div>
+    </section>
+</div>
+
+
+
+

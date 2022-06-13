@@ -1,0 +1,23 @@
+C:\Users\Sevil AYDIN\Desktop\sinema ödev\CinemaProject-5\MovieTheater\MovieTheater_NTier\COMMON\bin\Debug\COMMON.dll
+C:\Users\Sevil AYDIN\Desktop\sinema ödev\CinemaProject-5\MovieTheater\MovieTheater_NTier\COMMON\bin\Debug\COMMON.pdb
+C:\Users\Sevil AYDIN\Desktop\sinema ödev\CinemaProject-5\MovieTheater\MovieTheater_NTier\COMMON\obj\Debug\COMMON.csproj.AssemblyReference.cache
+C:\Users\Sevil AYDIN\Desktop\sinema ödev\CinemaProject-5\MovieTheater\MovieTheater_NTier\COMMON\obj\Debug\COMMON.csproj.CoreCompileInputs.cache
+C:\Users\Sevil AYDIN\Desktop\sinema ödev\CinemaProject-5\MovieTheater\MovieTheater_NTier\COMMON\obj\Debug\COMMON.dll
+C:\Users\Sevil AYDIN\Desktop\sinema ödev\CinemaProject-5\MovieTheater\MovieTheater_NTier\COMMON\obj\Debug\COMMON.pdb
+C:\Users\Tuba\Desktop\sinema ödev\CinemaProject-5\MovieTheater\MovieTheater_NTier\COMMON\bin\Debug\COMMON.dll
+C:\Users\Tuba\Desktop\sinema ödev\CinemaProject-5\MovieTheater\MovieTheater_NTier\COMMON\bin\Debug\COMMON.pdb
+C:\Users\Tuba\Desktop\sinema ödev\CinemaProject-5\MovieTheater\MovieTheater_NTier\COMMON\obj\Debug\COMMON.csproj.AssemblyReference.cache
+C:\Users\Tuba\Desktop\sinema ödev\CinemaProject-5\MovieTheater\MovieTheater_NTier\COMMON\obj\Debug\COMMON.csproj.CoreCompileInputs.cache
+C:\Users\Tuba\Desktop\sinema ödev\CinemaProject-5\MovieTheater\MovieTheater_NTier\COMMON\obj\Debug\COMMON.dll
+C:\Users\Tuba\Desktop\sinema ödev\CinemaProject-5\MovieTheater\MovieTheater_NTier\COMMON\obj\Debug\COMMON.pdb
+C:\Users\Tuba\Desktop\TestTuba\TestTuba\MovieTheater\MovieTheater_NTier\COMMON\bin\Debug\COMMON.dll
+C:\Users\Tuba\Desktop\TestTuba\TestTuba\MovieTheater\MovieTheater_NTier\COMMON\bin\Debug\COMMON.pdb
+C:\Users\Tuba\Desktop\TestTuba\TestTuba\MovieTheater\MovieTheater_NTier\COMMON\obj\Debug\COMMON.csproj.AssemblyReference.cache
+C:\Users\Tuba\Desktop\TestTuba\TestTuba\MovieTheater\MovieTheater_NTier\COMMON\obj\Debug\COMMON.csproj.CoreCompileInputs.cache
+C:\Users\Tuba\Desktop\TestTuba\TestTuba\MovieTheater\MovieTheater_NTier\COMMON\obj\Debug\COMMON.dll
+C:\Users\Tuba\Desktop\TestTuba\TestTuba\MovieTheater\MovieTheater_NTier\COMMON\obj\Debug\COMMON.pdb
+C:\Users\Tuba\Desktop\sinema ödev\MovieTheater\MovieTheater_NTier\COMMON\bin\Debug\COMMON.dll
+C:\Users\Tuba\Desktop\sinema ödev\MovieTheater\MovieTheater_NTier\COMMON\bin\Debug\COMMON.pdb
+C:\Users\Tuba\Desktop\sinema ödev\MovieTheater\MovieTheater_NTier\COMMON\obj\Debug\COMMON.csproj.CoreCompileInputs.cache
+C:\Users\Tuba\Desktop\sinema ödev\MovieTheater\MovieTheater_NTier\COMMON\obj\Debug\COMMON.dll
+C:\Users\Tuba\Desktop\sinema ödev\MovieTheater\MovieTheater_NTier\COMMON\obj\Debug\COMMON.pdb

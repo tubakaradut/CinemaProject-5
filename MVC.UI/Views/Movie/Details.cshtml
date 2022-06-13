@@ -1,0 +1,211 @@
+﻿@using DAL.Entities;
+@model Movie
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+
+<div class="row">
+    <div class="col-md-9">
+
+        <section class="panel">
+            <div class="panel-body">
+                <div class="col-md-6">
+                    <div class="pro-img-details">
+                        <img src="https://kapaklitaxi.com/wp-content/uploads/2019/05/ef3-placeholder-image.jpg" alt="">
+                        @*@if (Model.ProductImagePath != null)
+                            {
+                                <img src="~/Content/image/product/@Model.ProductImagePath" alt="">
+                            }
+                            else
+                            {
+                                <img src="https://kapaklitaxi.com/wp-content/uploads/2019/05/ef3-placeholder-image.jpg" alt="">
+
+                            }*@
+                    </div>
+
+                </div>
+                <div class="col-md-6">
+                    <h4 class="pro-d-title">
+                        <a href="#" rel="tag">
+                            @Model.MovieName
+                        </a>
+                    </h4>
+                    <p>
+                        @Model.Description
+                    </p>
+                    <div class="product_meta">
+                        <span class="posted_in">
+                            <strong>Süre:</strong>
+                            <a rel="tag" href="#">@Model.Duration</a>
+                        </span>
+                    </div>
+                    <div class="product_meta">
+                        <span class="posted_in">
+                            <strong>Categories:</strong>
+                            <ul>
+                                @foreach (var movieCategory in Model.MovieCategories)
+                                {
+                                    <li>@movieCategory.Category.CategoryName</li>
+                                }
+                            </ul>
+
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="panel">
+            <header class="panel-heading tab-bg-dark-navy-blue">
+                <ul class="nav nav-tabs ">
+                    <li class="active">
+                        <a data-toggle="tab" href="#description">
+                            Tarih Seçiniz
+                        </a>
+                    </li>
+
+                </ul>
+            </header>
+            <div class="panel-body">
+                <div class="tab-content tasi-tab">
+                    <div id="description" class="tab-pane active col-md-12">
+                        <div class="col-md-4">
+                            @foreach (var theater in Model.Theaters)
+                            {
+                                TimeSpan dateDiff = theater.Week.LastDay.Subtract(theater.Week.FirstDay);
+                                <article class="media">
+                                    <div class="media-body">
+                                        <h4 class="cmt-head sessionDate"><i class="icon-time"></i> Bugün</h4>
+                                    </div>
+                                    @for (int i = 1; i <= dateDiff.Days; i++)
+                                    {
+                                        <div class="media-body">
+                                            <h4 class="cmt-head sessionDate" id="sessionDate"><i class="icon-time"></i> @theater.Week.FirstDay.AddDays(i).ToLongDateString()</h4>
+                                        </div>
+                                    }
+                                </article>
+                            }
+                        </div>
+                        <div class="col-md-4 sessionTime">
+                            <article class="media">
+                                @foreach (var session in ViewBag.Sessions)
+                                {
+                                    <div class="media-body">
+                                        <h4 class="cmt-head sessionTime" id="sessionTime"><i class="icon-time"></i> @session.Duration</h4>
+                                    </div>
+                                }
+                            </article>
+                        </div>
+                        <div class="col-md-4">
+                            <div id="spinner4">
+                                <span class="help-block">
+                                    Kişi Sayısı
+                                </span>
+                                <div class="input-group" style="width:150px;">
+                                    <div class="spinner-buttons input-group-btn">
+                                        <button type="button" class="btn spinner-up btn-warning">
+                                            <i class="icon-plus"></i>
+                                        </button>
+                                    </div>
+                                    <input type="text" id="quantity" class="spinner-input form-control" maxlength="3" readonly>
+                                    <div class="spinner-buttons input-group-btn">
+                                        <button type="button" class="btn spinner-down btn-danger">
+                                            <i class="icon-minus"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    @*<div id="reviews" class="tab-pane">
+                            <article class="media">
+                                <a class="pull-left thumb p-thumb">
+                                    <img src="img/avatar-mini.jpg">
+                                </a>
+                                <div class="media-body">
+                                    <a href="#" class="cmt-head">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a>
+                                    <p> <i class="icon-time"></i> 1 hours ago</p>
+                                </div>
+                            </article>
+                            <article class="media">
+                                <a class="pull-left thumb p-thumb">
+                                    <img src="img/avatar-mini2.jpg">
+                                </a>
+                                <div class="media-body">
+                                    <a href="#" class="cmt-head">Nulla vel metus scelerisque ante sollicitudin commodo</a>
+                                    <p> <i class="icon-time"></i> 23 mins ago</p>
+                                </div>
+                            </article>
+                            <article class="media">
+                                <a class="pull-left thumb p-thumb">
+                                    <img src="img/avatar-mini3.jpg">
+                                </a>
+                                <div class="media-body">
+                                    <a href="#" class="cmt-head">Donec lacinia congue felis in faucibus. </a>
+                                    <p> <i class="icon-time"></i> 15 mins ago</p>
+                                </div>
+                            </article>
+                        </div>*@
+                </div>
+            </div>
+        </section>
+        @*<p>
+                <button class="btn btn-round btn-danger" type="button"><i class="icon-shopping-cart"></i> Bilet Al</button>
+            </p>*@
+        <a href="#" class="btn btn-round btn-danger buyTicket">Bilet Al</a>
+        @*@Html.ActionLink("Bilet Al", "AddToCart", "Home", new {  }, new { @class = "btn btn-round btn-danger buyTicket" })*@
+    </div>
+</div>
+@section Script{
+    <script>
+
+    $("#buyTicket").click(function (e) {
+        var cartItem = new Object();
+
+        cartItem.MovieName = "@Model.MovieName";
+        cartItem.Quantity = $("#quantity").val();
+        cartItem.Price = 50;
+        cartItem.MovieDate = $("#sessionDate.active").val();
+        cartItem.MovieTime= $("#sessionTime.active").val();
+        var url = '@Url.Action("AddToCart", "Home")';
+        console.log(url);
+        @*if (cartItem != null) {
+            $.ajax({
+                type: "POST",
+                url: "@Url.Action("AddToCart", "Home")",
+                data: JSON.stringify(cartItem),
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (response) {
+                    //if (response != null) {
+                    //    alert("Name : " + response.Name + ", Designation : " + response.Designation + ", Location :" + response.Location);
+                    //} else {
+                    //    alert("Something went wrong");
+                    //}
+                },
+                failure: function (response) {
+                    alert(response.responseText);
+                },
+                error: function (response) {
+                    alert(response.responseText);
+                }
+            });
+        }*@
+
+        //var url = $(this).attr("href");
+        //$.post(url, cartItem);
+    });
+    </script>
+    }
+
+@*$.ajax({
+    method: 'Post',
+    url: 'https://localhost:44376/api/employees/PostAddEmployee',
+    data: employee,
+    success: function (employees) {
+        BringData(employees);
+    }*@
+
+
