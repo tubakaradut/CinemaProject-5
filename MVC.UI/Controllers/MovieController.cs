@@ -13,15 +13,18 @@ namespace MVC.UI.Controllers
 
         MovieService movieService = new MovieService();
         SessionService sessionService = new SessionService();
+        SaloonService saloonService = new SaloonService();
 
 
         public ActionResult Details(int id)
         {
             var sessions = sessionService.GetList();
+            var saloons = saloonService.GetList();
             var movie = movieService.GetById(id);
             if (movie != null)
             {
                 ViewBag.Sessions = sessions;
+                ViewBag.Saloon=saloons;
                 return View(movie);
             }
             else
@@ -31,10 +34,5 @@ namespace MVC.UI.Controllers
 
         }
 
-        //public PartialViewResult _SampleProducts(Guid id)
-        //{
-        //    //var products = movieService.GetDefault(x => x.SubCategoryId == id).Take(3).ToList();
-        //    //return PartialView(products);
-        //}
     }
 }

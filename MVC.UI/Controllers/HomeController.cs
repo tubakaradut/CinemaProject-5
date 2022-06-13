@@ -132,6 +132,8 @@ namespace MVC.UI.Controllers
             return View("Login");
         }
 
+
+
         //sepet işlemleri
         [HttpPost]
         public JsonResult AddToCart(CartItem cartItem)
@@ -165,12 +167,11 @@ namespace MVC.UI.Controllers
                 return Json(movie.Id, JsonRequestBehavior.AllowGet);
 
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 return Json(null, JsonRequestBehavior.AllowGet);
             }
 
-            return Json(null, JsonRequestBehavior.AllowGet);
         }
 
         //benim sepetim
@@ -203,9 +204,10 @@ namespace MVC.UI.Controllers
         public ActionResult CompleteCart()
         {
             Cart cart = Session["kcart"] as Cart;
-            AppUser user = Session["user"] as AppUser;
+            //AppUser user = Session["user"] as AppUser;
+            AppUser user = Session["member"] as AppUser;
 
-           
+
             if (user == null)
             {
                 return RedirectToAction("Login");
@@ -224,13 +226,10 @@ namespace MVC.UI.Controllers
                 Random rnd = new Random();
                 ViewBag.OrderNumber = rnd.Next(1, 1000);
 
-                
-
-
                 //Send Mail
 
-                string content = $"Alışveriş Listeniz; Sipariş Numaranız: {ViewBag.OrderNumber} ,filmleriniz:  {sepetList}";
-                MailSender.SendEmail(user.Email, "Sipariş Maili", content);
+                string content = $"Alışveriş Listeniz; Bİletiniz oluşturulmuştur: {ViewBag.OrderNumber} ,filmleriniz:  {sepetList}";
+                //MailSender.SendEmail(user.Email, "Sipariş Maili", content);
 
 
                 Session.Remove("kcart");
@@ -241,6 +240,11 @@ namespace MVC.UI.Controllers
             return View();
         }
 
+        public ActionResult Exit()
+        {
+            Session.Remove("user");
+            return RedirectToAction("index");
+        }
 
     }
 }

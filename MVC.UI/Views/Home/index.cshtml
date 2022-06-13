@@ -15,21 +15,11 @@
                 <div class="col-md-4">
                     <section class="panel">
                         <div class="pro-img-box">
-                            @*@if (product.ProductImagePath != null)
-                                {
-                                    <img src="~/Content/image/product/@product.ProductImagePath" alt="">
-                                }
-                                else
-                                {*@
+                          
                             <img src="https://st2.depositphotos.com/13194036/44748/i/600/depositphotos_447487454-stock-photo-close-view-bucket-popcorn-clapperboard.jpg" alt="">
 
-                            @*}*@
-                            <br />
-                            @*<a href="/Home/AddToCart/@movie.Id" class="adtocart">
-                                <i class="icon-apple"></i>*@
-
-                                @Html.ActionLink("Bilet Al", "AddToCart", new { id = movie.Id }, new { @class = "btn btn-dark mt-2" })
-                            @*</a>*@
+                                @*@Html.ActionLink("Bilet Al", "AddToCart", new { id = movie.Id }, new { @class = "btn btn-dark mt-2" })*@
+                        
                         </div>
 
                         <div class="panel-body text-center">

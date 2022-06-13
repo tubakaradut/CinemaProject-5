@@ -12,6 +12,8 @@ namespace DAL.Entities
         public string SaloonName { get; set; }
         public int Capacity { get; set; }
 
+        public int GelenKisiSayisi { get; set; } //bak
+
 
         //Relation Property
         public virtual List<Theater> Theaters { get; set; }
