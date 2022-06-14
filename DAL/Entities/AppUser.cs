@@ -12,8 +12,8 @@ namespace DAL.Entities
         public string Email { get; set; }
         public string Address { get; set; }
         public string Password { get; set; }
-        public Guid ActivationCode { get; set; }
-        public bool IsActive { get; set; }
+        //public Guid ActivationCode { get; set; } //mail göderme işlemine  google tarafından kısıtlama getirilmiş.
+        //public bool IsActive { get; set; }
         public AppUserRole Role { get; set; }
 
 

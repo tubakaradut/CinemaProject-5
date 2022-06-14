@@ -100,7 +100,6 @@ C:\Users\Tuba\Desktop\SinemaProjesi\CinemaProject-5\Core\bin\Debug\EntityFramewo
 C:\Users\Tuba\Desktop\SinemaProjesi\CinemaProject-5\Core\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\Tuba\Desktop\SinemaProjesi\CinemaProject-5\Core\bin\Debug\EntityFramework.xml
 C:\Users\Tuba\Desktop\SinemaProjesi\CinemaProject-5\Core\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\Tuba\Desktop\SinemaProjesi\CinemaProject-5\Core\obj\Debug\Core.csproj.AssemblyReference.cache
 C:\Users\Tuba\Desktop\SinemaProjesi\CinemaProject-5\Core\obj\Debug\Core.csproj.CoreCompileInputs.cache
 C:\Users\Tuba\Desktop\SinemaProjesi\CinemaProject-5\Core\obj\Debug\Core.csproj.CopyComplete
 C:\Users\Tuba\Desktop\SinemaProjesi\CinemaProject-5\Core\obj\Debug\Core.dll

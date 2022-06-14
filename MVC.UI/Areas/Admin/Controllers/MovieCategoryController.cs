@@ -43,39 +43,7 @@ namespace MVC.UI.Areas.Admin.Controllers
             }
             return View();
         }
-       //güncelleme yapılacak
-        public ActionResult Update(int id)
-        {
-            try
-            {
-                ViewBag.Movie = movieService.GetList();
-                ViewBag.Category = categoryService.GetList();
-                MovieCategory updated = moviecategoryservice.GetById(id);
-                return View(updated);
-            }
-            catch (Exception ex)
-            {
-                TempData["error"] = ex.Message;
-                return View();
-            }
-        }
-
-        [HttpPost]
-        public ActionResult Update(MovieCategory updated)
-        {
-            try
-            {
-                string result = moviecategoryservice.Update(updated);
-                TempData["info"] = result;
-                return RedirectToAction("Index");
-            }
-            catch (Exception ex)
-            {
-                TempData["error"] = ex.Message;
-            }
-            return View();
-        }
-
+      
         public ActionResult Delete(MovieCategory movieCategory)
         {
             try

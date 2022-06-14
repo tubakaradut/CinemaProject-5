@@ -13,8 +13,9 @@ namespace DAL.Map
         public AppUserMap()
         {
             ToTable("dbo.AppUsers");
-            Property(x => x.Firstname).IsRequired().HasMaxLength(255);
-            Property(x => x.Lastname).IsRequired().HasMaxLength(255);
+            Property(x => x.Firstname).HasMaxLength(255);
+            Property(x => x.Lastname).HasMaxLength(255);
+            Property(x => x.Email).IsRequired();
             Property(x => x.Password).IsRequired().HasMaxLength(255);
 
         }

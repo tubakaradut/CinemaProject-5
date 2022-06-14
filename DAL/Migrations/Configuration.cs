@@ -1,5 +1,6 @@
 ﻿namespace DAL.Migrations
 {
+    using Core.Enum;
     using DAL.Entities;
     using System;
     using System.Collections.Generic;
@@ -55,12 +56,6 @@
                 new Movie{MovieName="Esaretin Bedeli",Description="Esaretin Bedeli, Frank Darabont'un senaryosunu yazdığı ve yönettiği, başrollerinde Tim Robbins ve Morgan Freeman'ın yer aldığı 1994 yapımı Amerikan dram filmidir",Duration=190},
                 //dram
 
-                new Movie{MovieName="Parazit",Description="Parazit, yönetmenliği ve senaristliği Bong Joon-ho tarafından yapılan 2019 çıkışlı Güney Kore kara komedi, gerilim filmidir. Filmin senaryosu yönetmen Bong Joon-ho ve Han Jin-won ile birlikte yazılmıştır. Başlıca oyuncuları Song Kang-ho, Lee Sun-kyun, Cho Yeo-jeong, Choi Woo-shik ve Park So-dam'dır.",Duration=180},
-                //gerilim,dram
-
-                new Movie{MovieName="Uzaydan Gelen Fırtına",Description="Dünyadaki iklim değişikliği, insan ırkını tehdit eder hale gelince ülkeler bir araya gelerek Dutch Boy adı verilen bir iklim kontrol sistemi oluşturmuştur. Dünyanın her yerini saran uydulardan oluşan bu sistem doğal afetleri önleme ve hava durumunu kontrol etme görevini 2 yıl başarıyla sürdürdükten sonra yaşanan teknik bir arıza, her şeyi alt üst eder. Dünyanın bir manyetik fırtına sonucunda yok olmasını önlemek için birilerinin uzaya giderek uydulardaki sorunu çözmesi gerekecektir.",Duration=109}
-                //bilimkurgu
-               
 
             };
 
@@ -80,11 +75,7 @@
                 new MovieCategory{MovieId=1,CategoryId=2},
                 new MovieCategory{MovieId=1,CategoryId=8},
                 new MovieCategory{MovieId=2,CategoryId=5},
-                //new MovieCategory{MovieId=3,CategoryId=5},
-                //new MovieCategory{MovieId=3,CategoryId=6},
-                //new MovieCategory{MovieId=4,CategoryId=1},
-                //new MovieCategory{MovieId=4,CategoryId=2}
-
+              
             };
             if (!context.MovieCategories.Any())
             {
@@ -141,12 +132,8 @@
             List<Week> weeks = new List<Week>()
             {
                 new Week{WeekName="1.Hafta",FirstDay=DateTime.Now,LastDay=DateTime.Now.AddDays(14)},
-                new Week{WeekName="2.Hafta",FirstDay=DateTime.Now,LastDay=DateTime.Now.AddDays(14)},
-                //new Week{Id=2,FirstDay=DateTime.Now.AddDays(1),LastDay=DateTime.Now.AddDays(15)},
-                //new Week{Id=3,FirstDay=DateTime.Now.AddDays(2),LastDay=DateTime.Now.AddDays(16)},
-                //new Week{Id=4,FirstDay=DateTime.Now.AddDays(3),LastDay=DateTime.Now.AddDays(17)},
-                //new Week{Id=5,FirstDay=DateTime.Now.AddDays(4),LastDay=DateTime.Now.AddDays(18)},
-
+                new Week{WeekName="2.Hafta",FirstDay=DateTime.Now.AddDays(14),LastDay=DateTime.Now.AddDays(28)},
+               
             };
 
             if (!context.Weeks.Any())
@@ -165,13 +152,7 @@
             {
                 new Theater{MovieId=1,SessionId=1,SaloonId=1,WeekId=1},
                 new Theater{MovieId=2,SessionId=2,SaloonId=2,WeekId=2},
-                //new Theater{MovieId=3,SessionId=3,SaloonId=3,WeekId=3},
-                //new Theater{MovieId=4,SessionId=4,SaloonId=4,WeekId=4},
-
-                //new Theater{MovieId=1,SessionId=2,SalonId=5,WeekId=5},
-                //new Theater{MovieId=2,SessionId=1,SalonId=4,WeekId=2},
-                //new Theater{MovieId=3,SessionId=3,SalonId=2,WeekId=4},
-                //new Theater{MovieId=4,SessionId=2,SalonId=1,WeekId=1}
+              
             };
 
 
@@ -182,9 +163,23 @@
                     context.Theaters.Add(theater);
                     context.SaveChanges();
                 }
-
             }
 
+            //AppUser
+            List<AppUser> appUsers = new List<AppUser>()
+            {
+                new AppUser{Firstname="Tuba",Lastname="Buğday",Username="tubik",Email="karadut.tuba@gmail.com",Address=null,Password="1234"/*,ActivationCode=Guid.NewGuid(),IsActive=true*/,Role=Core.Enum.AppUserRole.Admin,CreatedDate=DateTime.Now,DataStatus=DataStatus.Active}
+            };
+
+            if (!context.AppUsers.Any(x=>/*x.IsActive &&*/ x.Role == AppUserRole.Admin))
+            {
+                foreach (var appUser in appUsers)
+                {
+                    context.AppUsers.Add(appUser);
+                    context.SaveChanges();
+                }
+
+            }
 
         }
     }
