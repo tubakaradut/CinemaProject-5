@@ -1947,7 +1947,6 @@
     <None Include="packages.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\Login.cshtml" />
     <Content Include="Views\Home\index.cshtml" />
     <Content Include="Views\Movie\Details.cshtml" />
     <Content Include="Views\Home\MyCart.cshtml" />

@@ -13,9 +13,10 @@ namespace MVC.UI.Controllers
 {
     public class LoginController : Controller
     {
-        // GET: Login
-        AppUserService appUserService = new AppUserService();
+        //Google, 30 Mayıs 2022 tarihinden itibaren hesabınızın güvende kalmasına yardımcı olmak amacıyla, Google Hesabınızda oturum açmak için yalnızca kullanıcı adı ve şifrenizi isteyen üçüncü taraf uygulamalarının ve cihazların kullanımını artık desteklemeyecektir.Bundan ötürü activasyon kodu ve alışveriş listesi mail olarak atılamadı.kullanıcı aktif/pasif işlemleri de yapılamadı.
 
+        AppUserService appUserService = new AppUserService();
+        
         public ActionResult Index()
         {
             return View();
@@ -34,7 +35,6 @@ namespace MVC.UI.Controllers
                     Session["member"] = appUser;
                     return RedirectToAction("CompleteCart", "Home");
                 }
-
                 else
                 {
                     TempData["error"] = "Kullanıcı Bilgileri Hatalı veya Hesabınızı Aktive Değil!";
@@ -72,8 +72,6 @@ namespace MVC.UI.Controllers
                 appUser.Username = appUserVM.Username;
                 appUser.Firstname = appUserVM.Firstname;
                 appUser.Lastname = appUserVM.Lastname;
-
-
 
                 //appUser.ActivationCode = Guid.NewGuid();
                 var result = appUserService.Add(appUser);

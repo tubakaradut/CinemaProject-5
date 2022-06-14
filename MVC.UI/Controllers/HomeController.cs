@@ -115,7 +115,7 @@ namespace MVC.UI.Controllers
                 Random rnd = new Random();
                 ViewBag.OrderNumber = rnd.Next(1, 1000);
 
-                //Send Mail
+                //Mail gönderme işlemi yapılamamaktadır. acıklama login controlünde yer almakatadır
 
                 string content = $"Alışveriş Listeniz; Bİletiniz oluşturulmuştur: {ViewBag.OrderNumber} ,filmleriniz:  {sepetList}";
                 //MailSender.SendEmail(user.Email, "Sipariş Maili", content);
