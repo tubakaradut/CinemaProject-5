@@ -55,7 +55,8 @@
 
                 new Movie{MovieName="Esaretin Bedeli",Description="Esaretin Bedeli, Frank Darabont'un senaryosunu yazdığı ve yönettiği, başrollerinde Tim Robbins ve Morgan Freeman'ın yer aldığı 1994 yapımı Amerikan dram filmidir",Duration=190},
                 //dram
-
+                 new Movie{MovieName="Fakat Müzeyyen Bu Derin bir Tutku",Description="ask,tutku filmidir",Duration=100},
+                //dram
 
             };
 

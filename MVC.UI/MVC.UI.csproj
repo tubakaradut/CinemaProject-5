@@ -1944,6 +1944,8 @@
     <Content Include="Areas\Admin\Views\MovieCategory\Index.cshtml" />
     <Content Include="Areas\Admin\Views\MovieCategory\Create.cshtml" />
     <Content Include="Areas\Admin\Views\MovieCategory\Update.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\_LayoutArea.cshtml" />
+    <Content Include="Areas\Admin\Views\Category\View.cshtml" />
     <None Include="packages.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
@@ -1963,7 +1965,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Data\" />
-    <Folder Include="Areas\Admin\Views\Shared\" />
     <Folder Include="Content\assets\jquery-file-upload\server\node\public\files\thumbnail\" />
     <Folder Include="Content\assets\jquery-file-upload\server\node\tmp\" />
     <Folder Include="Content\assets\jquery-file-upload\server\php\files\thumbnail\" />
