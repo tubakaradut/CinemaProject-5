@@ -1756,7 +1756,7 @@
     <Compile Include="Areas\Admin\Controllers\MovieController.cs" />
     <Compile Include="Areas\Admin\Controllers\SaloonController.cs" />
     <Compile Include="Areas\Admin\Controllers\TheaterController.cs" />
-    <Compile Include="Areas\Admin\Views\WeekController.cs" />
+    <Compile Include="Areas\Admin\Controllers\WeekController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\MovieController.cs" />
